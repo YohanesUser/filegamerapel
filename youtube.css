@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ccc;
+}
+
+h1 {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    transition: max-height 0.3s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Memastikan konten utama memanjang sesuai kebutuhan */
+}
+
+section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.btn {
+    background-image: url('Rapel.jpg'); /* Path relatif ke gambar di galeri */
+    background-size: cover; /* Mengatur ukuran gambar agar menutupi tombol */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    color: white; /* Warna teks */
+    padding: 150px 100px; /* Padding tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    transition: opacity 0.3s ease; /* Transisi untuk efek hover */
+    overflow: hidden; /* Menyembunyikan overflow */
+}
+
+.btn1 {
+    background-image: url('bondan.jpg'); /* Path relatif ke gambar di galeri */
+    background-size: cover; /* Mengatur ukuran gambar agar menutupi tombol */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    color: white; /* Warna teks */
+    padding: 150px 100px; /* Padding tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    transition: opacity 0.3s ease; /* Transisi untuk efek hover */
+    overflow: hidden; /* Menyembunyikan overflow */
+}
+
+.btn:hover {
+    background-color: #1558b0;
+}
+
+.btn:active {
+    background-color: #0d3c78;
+}
+
+#scrollToTopBtn {
+    display: none; /* Tombol tidak terlihat awalnya */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: bottom 0.3s ease; /* Tambahkan transisi pada bottom */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+
+/* Atur gaya untuk layar loading */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+}
+
+.p {
+    text-align: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#progress-bar {
+    width: 50%;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#progress-bar > div {
+    height: 100%;
+    background-color: #4caf50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: progressBar 2d linear;
+}
+
+@keyframes progressBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.spinner-container {
+    text-align: center;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+#spinner-message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.styled-hr {
+    border: none;
+    border-top: 2px solid #000000; /* Blue color */
+    margin: 20px 0;
+    width: 100%; /* Width of the line */
+    align-items: center;
+}
+
+.youtube-button {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff0000;
+    border: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube-button:hover {
+    background-color: #cc0000;
+    justify-content: center;
+}
+
+.button-container,
+.gif-container
+.p-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh; /* Sesuaikan jika Anda tidak ingin mengisi seluruh tinggi viewport */
+}
+
+.wa-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #25d366;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.wa-button:hover {
+    background-color: #1ebe5b;
+}
+
+    
+/* Sembunyikan konten halaman sampai layar loading selesai */
+.content {
+    display: none;
+}
+
+
+footer {
+    background-color: #1a73d8;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+    }
+    
+    header nav ul {
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu.active {
+        max-height: 300px; /* Adjust based on content */
+    }
+}

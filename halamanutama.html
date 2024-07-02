@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut File Game</title>
+    <link rel="stylesheet" href="halamanutama.css">
+    <style>
+        .button-container {
+            text-align: center; /* Pusatkan kontainer */
+            margin: 20px; /* Tambahkan margin */
+        }
+        .btn {
+            background-color: #008CBA; /* Warna latar belakang */
+            border: none; /* Tanpa border */
+            color: white; /* Warna teks */
+            padding: 150px 100px; /* Padding */
+            text-align: center; /* Teks di tengah */
+            text-decoration: none; /* Tanpa garis bawah */
+            display: inline-block; /* Inline block */
+            font-size: 16px; /* Ukuran font */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer; /* Cursor pointer */
+            border-radius: 4px; /* Border radius */
+        }
+        .btn:hover {
+            background-color: #005f73; /* Warna latar belakang saat hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Shortcut file game yang Dimainkan Juna</h1>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <ul id="menu">
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Manakah Foto Rapel yang benar? (klik yang paling bawah)</h2>
+            <div class="container">
+                <div class="button-container">
+                    <a href="Rapel.jpg" class="btn">Salah</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="home">
+            <div class="container">
+                <div class="button-container">
+                    <a href="scroll.js" class="btn">SESAT</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="home">
+            <div class="container">
+                <div class="button-container">
+                    <a href="youtube.html" class="btn">Benar</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="hidden">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Information about our company.</p>
+            </div>
+        </section>
+        <section id="services" class="hidden">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>Details about the services we offer.</p>
+            </div>
+        </section>
+        <section id="contact" class="hidden">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>How to get in touch with us.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Website Rapel. Created and assembled by Yhns (kanutan).</p>
+            <p>Call: 0895-3006-7456</p>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+    <script src="scroll.js"></script>
+    <script src="halamanulama.js"></script>
+</body>
+</html>
